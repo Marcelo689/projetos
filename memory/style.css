@@ -1,0 +1,17 @@
+img{
+    width:100px;
+    height:150px;
+}
+#images{
+    width:400px;
+    margin:0 auto;
+}
+#result{
+    margin:100px auto;
+    text-align:center;
+    font-size:2rem;
+}
+#button{
+    width:200px;
+    margin:100px auto;
+}

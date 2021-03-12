@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    align-items:center;
+}
+img{
+    width:100px;
+    height:120px;
+    margin-left:10px;
+}
+#urna_completa{
+    border:1px solid black;
+    position:absolute;
+    display:table;
+    margin-left:500px;
+    margin-top:200px;
+}
+#urna{
+    position:relative;
+    border:1px solid black;
+    width:500px;
+    height:300px;
+    float:left;
+    background:white;
+    display:flex;
+    justify-content:center;
+}
+#monitor{
+    background:lightgreen;
+    width:400px;
+    border:1px solid black;
+    height:200px;
+    font-size:2rem;
+    font-weight:bold;
+    color:black;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+}
+#botoes{
+    background:black;
+    color:white;
+    position:relative;
+    float:left;
+    border:1px solid black;
+    width:200px;
+    height:300px;
+}
+#linha1{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+}
+#linha2{
+    display:flex;
+    justify-content:center;
+}
+#linha3{
+    display:flex;
+    justify-content:center;
+}
+#linha4{
+    display:flex;
+    justify-content:center;
+}
+
+#linha1>div{
+    background:rgb(46, 45, 45);
+    margin:5px;
+    display:inline-block;
+    padding:12px 20px 12px 20px;
+    border:1px solid black;
+}
+#linha2>div{
+    background:rgb(46, 45, 45);
+    margin:5px;
+    display:inline-block;
+    padding:12px 20px 12px 20px;
+    border:1px solid black;
+}
+#linha3>div{
+    background:rgb(46, 45, 45);
+    margin:5px;
+    display:inline-block;
+    padding:12px 20px 12px 20px;
+    border:1px solid black;
+}
+#linha4>div{
+    background:rgb(46, 45, 45);
+    margin:5px;
+    padding:12px 20px 12px 20px;
+    border:1px solid black;
+    display:inline-block;
+}
+#botoes2{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+#branco,#corrige,#confirma{
+    display:inline-block;
+    width:60px;
+    height:20px;
+    margin:5px;
+    border:1px solid black;
+    font-size:0.8rem;
+    text-align:center;
+    font-weight:bold;
+    color:black;
+}
+#branco{
+    background:white;
+}
+#corrige{
+    background:rgb(230, 56, 56);
+}
+#confirma{
+    background:rgb(8, 252, 8)
+}

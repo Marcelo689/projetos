@@ -1,0 +1,55 @@
+#container{
+    border:1px solid black;
+    width:500px;
+    height:150px;
+    margin-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+
+
+    background:lightgreen;
+    border-radius:30px;
+    font-size:20px;
+}
+#lista{
+    width:700px;
+    margin:0 auto;
+    font-size:1rem;
+}
+body{
+    background:aquamarine;
+}
+*{
+    color:rgb(104, 101, 101);
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+#cria{
+    border-radius:15px;
+    border:none;
+    background:orange;
+    font-size:18px;
+    height:30px;
+}
+
+#limpa{
+    color:white;
+    font-size:18px;
+    display:block;
+    margin:20px auto;
+    background:red;
+    border-radius:5px;
+    border:1px solid black;
+}
+
+#tarefas{
+    width:300px;
+    height:30px;
+    background:rgba(20, 100, 175,0.2);
+    border-radius:15px;
+    outline:none;
+    font-size:20px;
+}

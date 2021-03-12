@@ -1,0 +1,42 @@
+#caixa-principal{
+    width:360px;
+    height:360px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    border:1px solid black;
+    background:black;
+    margin:100px auto;
+}
+#caixa-principal> div{
+    background:white;
+    color:black;
+    font-size:4rem;
+    border:1px solid black;
+    width:110px;
+    height:110px;
+    display:flex;
+    margin:3px;
+
+    line-height:170%;
+    font-weight:bold;
+    justify-content:center;
+}
+
+h1{
+    text-align:center;
+    margin-top:40px;
+    padding:50px;
+}
+.container{
+    display:grid;
+    justify-content:center;
+    width:50%;
+    margin:0 auto;
+}
+
+button{
+    background:lightcoral;
+    width:min-content;
+    margin:0 auto;
+}
