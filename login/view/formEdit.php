@@ -8,7 +8,10 @@ else
 {
 	header("location:mainPage.php");
 }
+include("../controller/controller_client.php");
+$client = new Client();
 
+$userData = $client->collectUserData($id);
 ?>
 <!doctype html>
 <html>
@@ -43,43 +46,79 @@ else
 								   ">
 		<h1 style="text-align:center;">Update</h1>
 		<input type="hidden" id="id" value="<?php echo $id ?>">
-		<label for="name">Name</label><input id="name"class="form-control" type="text">
-		<label for="age">Age</label><input id="age" class="form-control" type="text">
+		<label for="name">Name</label><input id="name"class="form-control" type="text" value="<?php echo $userData['nameClient']?>">
+		<label for="age">Age</label><input id="age" class="form-control" type="text" value="<?php echo $userData['ageClient']?>">
 		<label for="gender">Gender</label>
 		<br>
 		<select class="custom-select" id="gender">
-				<option value="" selected></option>
-				<option value="1">Masculino</option>
-				<option value="2">Feminino</option>
+				<option value="" ></option>
+				<?php
+				$result =$client->selectAllGender();
 				
+				for($i=0;$i < count($result);$i++)
+				{
+					if($userData['idGender'] == $result[$i]['idGender'])
+					{
+						echo "<option selected value='".$result[$i]["idGender"]."'>".$result[$i]["descriptionGender"]."</option>";
+					}else{
+						echo "<option value='".$result[$i]["idGender"]."'>".$result[$i]["descriptionGender"]."</option>";	
+					}
+				}
+				?>
 			</select>
 		<br><label for="city">City</label>
 			<select class="custom-select" id="city" onChange="autoCompleteSelect();">
-				<option value="" selected></option>
-				<option value="1">Portão</option>
-				<option value="2">Santa Cruz do Sul</option>
-				<option value="3">Porto Alegre</option>
-				<option value="4">São Leopoldo</option>
-				<option value="5">Novo Hamburgo</option>
+				<option value="" ></option>
+				<?php
+				$result =$client->selectAllCitys();
+				
+				for($i=0;$i < count($result);$i++)
+				{
+					if($userData['idCity'] == $result[$i]['idCity'])
+					{
+						echo "<option selected value='".$result[$i]["idCity"]."'>".$result[$i]["nameCity"]."</option>";	
+					}else{
+					echo "<option value='".$result[$i]["idCity"]."'>".$result[$i]["nameCity"]."</option>";
+					}
+				}
+				?>
 			</select>
 		
 		<br><label for="state">State</label>
 			<select class="custom-select" id="state">
-				<option value="" selected></option>
-				<option value="1">Rio Grande do Sul</option>
-				<option value="2">São Paulo</option>
-				<option value="3">Bahia</option>
-				<option value="4">Mato Grosso</option>
-				<option value="5">Acre</option>
+				<option value="" ></option>
+				<?php
+				$result =$client->selectAllStates();
+				
+				for($i=0;$i < count($result);$i++)
+				{
+					if($userData['idState'] == $result[$i]['idState'])
+					{
+					echo "<option selected value='".$result[$i]["idState"]."'>".$result[$i]["nameState"]."</option>";	
+					
+					}else{
+					echo "<option value='".$result[$i]["idState"]."'>".$result[$i]["nameState"]."</option>";	
+					}
+				}
+				?>
 			</select>
 		<br><label for="country">Country</label>
 			<select class="custom-select" id="country">
-				<option value="" selected></option>
-				<option value="1">Brasil</option>
-				<option value="2">Estados Unidos</option>
-				<option value="3">Mexico</option>
-				<option value="4">Canada</option>
-				<option value="5">Africa</option>
+				<option value="" ></option>
+				<?php
+				$result =$client->selectAllCountrys();
+				
+				for($i=0;$i < count($result);$i++)
+				{
+					if($userData['idCountry'] == $result[$i]['idCountry'])
+					{
+					echo "<option selected value='".$result[$i]["idCountry"]."'>".$result[$i]["nameCountry"]."</option>";	
+						
+					}else{
+					echo "<option value='".$result[$i]["idCountry"]."'>".$result[$i]["nameCountry"]."</option>";	
+					}
+				}
+				?>
 			</select>
 		
 		<div style="display:flex;

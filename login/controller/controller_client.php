@@ -79,5 +79,78 @@
 			
 			
 		}
+		public function selectAllGender()
+		{
+			$db = new Database();
+			
+			$con = $db->connect();
+			
+			$sql = "SELECT * FROM  gender;";
+			
+			$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+			
+			$result = $result->fetch_all(MYSQLI_ASSOC);
+			
+			return $result;
+		}
+		public function selectAllCitys()
+		{
+			$db = new Database();
+			
+			$con = $db->connect();
+			
+			$sql = "SELECT * FROM  city;";
+			
+			$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+			
+			$result = $result->fetch_all(MYSQLI_ASSOC);
+			
+			return $result;
+		}
+		
+		public function selectAllStates()
+		{
+			$db = new Database();
+			
+			$con = $db->connect();
+			
+			$sql = "SELECT * FROM  state;";
+			
+			$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+			
+			$result = $result->fetch_all(MYSQLI_ASSOC);
+			
+			return $result;
+		}
+		
+		public function selectAllCountrys()
+		{
+			$db = new Database();
+			
+			$con = $db->connect();
+			
+			$sql = "SELECT * FROM  country;";
+			
+			$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+			
+			$result = $result->fetch_all(MYSQLI_ASSOC);
+			
+			return $result;
+		}
+		public function collectUserData($id)
+		{
+			$db = new Database();
+			
+			$con = $db->connect();
+			
+			$sql = "SELECT * FROM  client WHERE idClient = $id;";
+			
+			$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+			
+			$result = mysqli_fetch_assoc($result);
+			
+			return $result;
+		}
+		
 	}
 ?>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jul-2021 às 00:40
--- Versão do servidor: 10.4.18-MariaDB
--- versão do PHP: 8.0.3
+-- Tempo de geração: 29-Jul-2021 às 19:47
+-- Versão do servidor: 10.4.19-MariaDB
+-- versão do PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,11 +65,8 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`idClient`, `nameClient`, `ageClient`, `idGender`, `idCity`, `idState`, `idCountry`) VALUES
-(12, 'Marcelo', 2, 2, 2, 0, 0),
-(14, 'ggfhghgf', 5, 1, 1, 0, 0),
 (15, 'f', 2, 1, 1, 1, 1),
-(16, 'Joao', 25, 1, 1, 0, 0),
-(17, 'Maria', 222, 2, 3, 0, 0);
+(18, 'Marcelo Santos', 23, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -112,9 +109,7 @@ CREATE TABLE `gender` (
 
 INSERT INTO `gender` (`idGender`, `descriptionGender`, `abbreviateGender`) VALUES
 (1, 'Masculino', 'M'),
-(2, 'Feminino', 'F'),
-(5, 'Masculino', 'M'),
-(6, 'Feminino', 'M');
+(2, 'Feminino', 'F');
 
 -- --------------------------------------------------------
 
@@ -146,7 +141,12 @@ INSERT INTO `logindate` (`idDate`, `idUser`, `loginDate`, `logoutDate`) VALUES
 (10, 1, '2021-07-14 09:36:01', '2021-07-14 11:24:32'),
 (11, 1, '2021-07-14 11:24:40', '0000-00-00 00:00:00'),
 (12, 1, '2021-07-14 18:49:59', '0000-00-00 00:00:00'),
-(13, 1, '2021-07-15 18:59:15', '0000-00-00 00:00:00');
+(13, 1, '2021-07-15 12:03:55', '2021-07-15 13:44:12'),
+(14, 1, '2021-07-16 10:32:53', '0000-00-00 00:00:00'),
+(15, 1, '2021-07-16 10:39:20', '0000-00-00 00:00:00'),
+(16, 1, '2021-07-16 12:20:10', '0000-00-00 00:00:00'),
+(17, 1, '2021-07-24 10:30:37', '0000-00-00 00:00:00'),
+(18, 1, '2021-07-29 13:41:22', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -179,7 +179,76 @@ INSERT INTO `orderproduct` (`idOrder`, `idProduct`, `Date`, `emailUser`) VALUES
 (11, 7, '2021-07-14 11:41:56', 'marcelo@gmail.com'),
 (12, 7, '2021-07-14 18:50:28', 'marcelo@gmail.com'),
 (13, 1, '2021-07-14 21:18:34', 'marcelo@gmail.com'),
-(14, 1, '2021-07-15 19:06:24', 'marcelo@gmail.com');
+(14, 1, '2021-07-15 12:10:37', 'marcelo@gmail.com'),
+(15, 1, '2021-07-15 12:13:18', 'marcelo@gmail.com'),
+(16, 1, '2021-07-15 12:13:28', 'marcelo@gmail.com'),
+(17, 1, '2021-07-15 12:13:47', 'marcelo@gmail.com'),
+(18, 1, '2021-07-15 12:15:32', 'marcelo@gmail.com'),
+(19, 1, '2021-07-15 12:17:06', 'marcelo@gmail.com'),
+(20, 1, '2021-07-15 12:17:29', 'marcelo@gmail.com'),
+(21, 1, '2021-07-15 12:17:45', 'marcelo@gmail.com'),
+(22, 2, '2021-07-16 12:28:27', ''),
+(23, 1, '2021-07-16 12:29:37', 'marcelo@gmail.com'),
+(24, 1, '2021-07-16 12:32:12', 'marcelo@gmail.com'),
+(25, 1, '2021-07-16 14:50:36', 'marcelo@gmail.com'),
+(26, 1, '2021-07-16 15:23:29', 'marcelo@gmail.com'),
+(27, 1, '2021-07-16 15:58:47', 'marcelo@gmail.com'),
+(28, 1, '2021-07-16 16:00:20', 'marcelo@gmail.com'),
+(29, 1, '2021-07-16 16:10:18', 'marcelo@gmail.com'),
+(30, 1, '2021-07-16 16:22:58', 'marcelo@gmail.com'),
+(31, 1, '2021-07-16 16:27:29', 'marcelo@gmail.com'),
+(32, 1, '2021-07-16 17:10:25', 'marcelo@gmail.com'),
+(33, 1, '2021-07-16 17:11:51', 'marcelo@gmail.com'),
+(34, 1, '2021-07-16 17:35:28', 'marcelo@gmail.com'),
+(35, 2, '2021-07-24 10:30:43', 'marcelo@gmail.com'),
+(36, 2, '2021-07-24 10:32:55', 'marcelo@gmail.com'),
+(37, 2, '2021-07-24 10:34:43', 'marcelo@gmail.com'),
+(38, 2, '2021-07-24 10:37:50', 'marcelo@gmail.com'),
+(39, 2, '2021-07-24 10:38:42', 'marcelo@gmail.com'),
+(40, 2, '2021-07-24 10:39:27', 'marcelo@gmail.com'),
+(41, 3, '2021-07-24 10:40:26', 'marcelo@gmail.com'),
+(42, 2, '2021-07-24 10:41:41', 'marcelo@gmail.com'),
+(43, 2, '2021-07-24 10:42:11', 'marcelo@gmail.com'),
+(44, 2, '2021-07-24 10:43:03', 'marcelo@gmail.com'),
+(45, 2, '2021-07-24 10:46:13', 'marcelo@gmail.com'),
+(46, 2, '2021-07-24 10:46:36', 'marcelo@gmail.com'),
+(47, 3, '2021-07-24 10:46:49', 'marcelo@gmail.com'),
+(48, 3, '2021-07-24 10:47:59', 'marcelo@gmail.com'),
+(49, 3, '2021-07-24 10:50:47', 'marcelo@gmail.com'),
+(50, 3, '2021-07-24 10:55:02', 'marcelo@gmail.com'),
+(51, 5, '2021-07-24 10:55:38', 'marcelo@gmail.com'),
+(52, 5, '2021-07-24 10:56:01', 'marcelo@gmail.com'),
+(53, 3, '2021-07-24 10:56:49', 'marcelo@gmail.com'),
+(54, 3, '2021-07-24 10:58:12', 'marcelo@gmail.com'),
+(55, 7, '2021-07-24 10:58:17', 'marcelo@gmail.com'),
+(56, 7, '2021-07-24 10:58:24', 'marcelo@gmail.com'),
+(57, 8, '2021-07-24 10:58:39', 'marcelo@gmail.com'),
+(58, 3, '2021-07-24 10:58:45', 'marcelo@gmail.com'),
+(59, 7, '2021-07-24 10:59:40', 'marcelo@gmail.com'),
+(60, 3, '2021-07-24 10:59:48', 'marcelo@gmail.com'),
+(61, 3, '2021-07-24 11:00:46', 'marcelo@gmail.com'),
+(62, 3, '2021-07-24 11:03:33', 'marcelo@gmail.com'),
+(63, 3, '2021-07-24 11:06:24', 'marcelo@gmail.com'),
+(64, 8, '2021-07-24 11:10:21', 'marcelo@gmail.com'),
+(65, 8, '2021-07-24 11:11:35', 'marcelo@gmail.com'),
+(66, 1, '2021-07-24 11:12:14', 'marcelo@gmail.com'),
+(67, 1, '2021-07-24 11:13:13', 'marcelo@gmail.com'),
+(68, 1, '2021-07-24 11:17:15', 'marcelo@gmail.com'),
+(69, 1, '2021-07-24 11:17:50', 'marcelo@gmail.com'),
+(70, 1, '2021-07-24 11:18:48', 'marcelo@gmail.com'),
+(71, 1, '2021-07-24 11:20:53', 'marcelo@gmail.com'),
+(72, 1, '2021-07-24 11:21:31', 'marcelo@gmail.com'),
+(73, 1, '2021-07-24 11:22:28', 'marcelo@gmail.com'),
+(74, 1, '2021-07-24 11:22:32', 'marcelo@gmail.com'),
+(75, 1, '2021-07-24 11:22:40', 'marcelo@gmail.com'),
+(76, 1, '2021-07-24 11:22:44', 'marcelo@gmail.com'),
+(77, 1, '2021-07-24 11:22:48', 'marcelo@gmail.com'),
+(78, 1, '2021-07-24 11:22:52', 'marcelo@gmail.com'),
+(79, 1, '2021-07-24 11:26:41', 'marcelo@gmail.com'),
+(80, 1, '2021-07-24 11:26:51', 'marcelo@gmail.com'),
+(81, 2, '2021-07-24 11:40:03', 'marcelo@gmail.com'),
+(82, 2, '2021-07-24 11:40:07', 'marcelo@gmail.com'),
+(83, 2, '2021-07-24 11:40:11', 'marcelo@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -206,15 +275,7 @@ INSERT INTO `product` (`idProduct`, `nameProduct`, `Barcode`, `Price`) VALUES
 (5, 'keyboard', 7891234560741, '300.00'),
 (6, 'mouse gamer', 9517534862055, '130.00'),
 (7, 'Notebook gamer', 7896321450564, '4.00'),
-(8, 'mp5', 9993331117770, '1200.00'),
-(9, 'banana', 1234567891230, '5.00'),
-(10, 'Memory ram', 9876543210123, '250.00'),
-(11, 'Knife', 1478523690159, '50.00'),
-(12, 'ps5', 3698521470357, '5000.00'),
-(13, 'keyboard', 7891234560741, '300.00'),
-(14, 'mouse gamer', 9517534862055, '130.30'),
-(15, 'Notebook gamer', 7896321450564, '4.50'),
-(16, 'mp5', 9993331117770, '1200.00');
+(8, 'mp5', 9993331117770, '1200.00');
 
 -- --------------------------------------------------------
 
@@ -234,7 +295,8 @@ CREATE TABLE `state` (
 --
 
 INSERT INTO `state` (`idState`, `abbreviateState`, `nameState`, `idCountry`) VALUES
-(1, 'RS', 'Rio Grande do Sul', 1);
+(1, 'RS', 'Rio Grande do Sul', 1),
+(3, 'RS', 'Bahia', 1);
 
 -- --------------------------------------------------------
 
@@ -253,7 +315,7 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`idStock`, `idProduct`, `amount`) VALUES
-(1, 1, 10),
+(1, 1, 1),
 (2, 2, 0),
 (3, 3, 0),
 (4, 4, 0),
@@ -359,7 +421,7 @@ ALTER TABLE `city`
 -- AUTO_INCREMENT de tabela `client`
 --
 ALTER TABLE `client`
-  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `country`
@@ -377,13 +439,13 @@ ALTER TABLE `gender`
 -- AUTO_INCREMENT de tabela `logindate`
 --
 ALTER TABLE `logindate`
-  MODIFY `idDate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idDate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `orderproduct`
 --
 ALTER TABLE `orderproduct`
-  MODIFY `idOrder` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idOrder` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT de tabela `product`

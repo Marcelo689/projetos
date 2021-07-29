@@ -134,7 +134,7 @@ function registerClient()
 		success:function (data)
 		{
 			console.log(data);
-			//mainPageLink("mainPage.php");
+			mainPageLink("mainPage.php");
 		}
 	});
 		}
