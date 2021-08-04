@@ -1,25 +1,16 @@
-	DB page e tabela user
-
-Crie um banco de dados com o nome "page";
-
-Cria uma tabela com o nome "user";
-A tabela user ira conter as colunas idUser,emailUser,passwordUser;
-
-
-////////////////////////////////////////////////////////////////
-
-	DB crud e tabelas relacionadas
+		Database 
+	instale o xampp.
+	depois de instalado inicie o control do xampp
+	iniciando o apache e mysql
+	abra o navegador na pagina https://localhost/phpmyadmin
+	faça login se necessario com usuario root e senha vazia
+	crie um database com o nome de crud
+	depois de criado o crud clique em importar e selecione o arquivo
+	importe o arquivo crud.sql encontrado na raiz do projeto
+dentro do seu phpmyadmin e clique em executar
 	
-Crie um banco de dados com o nome "crud";
-
-Cria uma tabela com o nome "client";
-A tabela client ira conter as colunas idclient,nameClient,ageClient,sexClient,idConty;
-
-Crie uma tabela com o nome "conty" que conterá as colunas:
-idConty,idState;
-
-Crie uma tabela com o nome "state" que conterá as colunas:
-idState,idContry;
-
-Crie uma tabela com o nome "contry" que conterá as colunas:
-idContry,idClient;
+	Depois mande os arquivos para dentro de C:\xamp\htdocs
+	abra o navegador no https://localhost 
+	efetue o login com usuario :marcelo@gmail.com
+	 e senha :senha123
+	
